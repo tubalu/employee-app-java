@@ -20,3 +20,9 @@ dog's back.
 > This is the second paragraph in the blockquote.
 >
 >> ## This is an H2 in a blockquote
+
+<table>
+    <tr>
+        <td>Foo</td>
+    </tr>
+</table>

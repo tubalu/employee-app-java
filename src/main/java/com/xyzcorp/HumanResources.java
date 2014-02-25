@@ -14,6 +14,12 @@ public class HumanResources {
     public void setPercentRaise(double percentRaise) {
         this.percentRaise = percentRaise;
     }
+    
+    public void layOff(Employee employee) {
+    	employee.setPay(0);
+    }
+    
+    
 
     public void setDAO(HumanResourceDAO DAO) {
         this.DAO = DAO;

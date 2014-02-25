@@ -37,4 +37,17 @@ public class HumanResourceTest {
 
         assertEquals(((.10 * 88) + 88), employee.getPay(), .01);
     }
+    @Test
+    public void testLayoff(){
+    	
+    	HumanResourceDAO humanResourceDAO = createMock(HumanResourceDAO.class);
+        HumanResources humanResources = new HumanResources();
+        humanResources.setPercentRaise(.10);
+        humanResources.setDAO(humanResourceDAO);
+        Employee employee = new Employee("Bob", "Barker", 88);
+        humanResources.giveEmployeeARaise(employee);
+        humanResources.layOff(employee);
+
+        assertEquals(0, employee.getPay(), .01);
+    }
 }

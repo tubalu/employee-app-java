@@ -27,7 +27,7 @@ public class HumanResourceTest {
     }
     
     @Test
-    public void testEmployeeLower() {
+    public void testEmployeeRaise2() {
         HumanResourceDAO humanResourceDAO = createMock(HumanResourceDAO.class);
         HumanResources humanResources = new HumanResources();
         humanResources.setPercentRaise(.10);
@@ -35,6 +35,6 @@ public class HumanResourceTest {
         Employee employee = new Employee("Bob", "Barker", 88);
         humanResources.giveEmployeeARaise(employee);
 
-        assertEquals((-1* (.10 * 88) + 88), employee.getPay(), .01);
+        assertEquals(((.10 * 88) + 88), employee.getPay(), .01);
     }
 }

@@ -35,7 +35,7 @@ public class HumanResourceTest {
         Employee employee = new Employee("Bob", "Barker", 88);
         humanResources.giveEmployeeARaise(employee);
 
-        assertEquals(((.10 * 88) + 889), employee.getPay(), .01);
+        assertEquals(((.10 * 88) + 88), employee.getPay(), .01);
     }
     @Test
     public void testLayoff(){

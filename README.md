@@ -26,3 +26,8 @@ dog's back.
         <td>Foo</td>
     </tr>
 </table>
+
+
+*   Red
+*   Green
+*   Blue

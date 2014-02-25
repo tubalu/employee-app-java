@@ -51,19 +51,19 @@ public class HumanResourceTest {
         assertEquals(0, employee.getPay(), .01);
     }
     
-    @Test
-    public void testSetFirstName() throws Exception{
-    	
-        Employee employee = new Employee("Bob", "Barker", 88);
-        employee.setFirstName("scott");
-        assertEquals(employee.getFirstName(),"scott");
-    }
-    
 //    @Test
-//    public void testSetFirstNameWithExp() throws Exception{
+//    public void testSetFirstName() throws Exception{
 //    	
 //        Employee employee = new Employee("Bob", "Barker", 88);
-//        employee.setFirstName("Mr. scott");
+//        employee.setFirstName("scott");
 //        assertEquals(employee.getFirstName(),"scott");
 //    }
+    
+    @Test(expected=Exception.class)
+    public void testSetFirstNameWithExp() throws Exception{
+    	
+        Employee employee = new Employee("Bob", "Barker", 88);
+        employee.setFirstName("Mr. scott");
+        assertEquals(employee.getFirstName(),"scott");
+    }
 }
